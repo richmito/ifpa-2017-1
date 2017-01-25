@@ -1,0 +1,85 @@
+<!--
+Atributos da tag body:
+bgcolor, cor do plano de fundo, em hexadecimal
+text, cor do texto, padrão: preto
+link, cor dos links, padrão: azul
+vlink, cor dos links visitados, padrão: vermelho
+alink, cor dos links não visitados, padrão: azul
+background, similar a bgcolor, mas permite inserir também o endereço de uma imagem
+bottommargin, recebe valor em pixels para a margem abaixo
+topmargin, mesmo, na margem de cima
+leftmargin, mesmo, na margem esquerda
+rightmargin, mesmo, na margem direita
+
+Tag cabeçalho:
+<h1><h2><h3<h4><h5><h6>
+Cada número representa um nível de cabeçalho
+O primeiro é o maior, o último é o menor
+
+Tag centralizar
+<center>Texto centralizado</center>
+Tag alinhar a esquerda
+<left>Texto alinhado a esquerda</left>
+Tag alinhar a direita
+<right>Texto alinhado a direita</right>
+
+Tag parágrafo
+<p>Primeiro parágrafo</p> <p>Segundo parágrafo</p>
+Seu fechamento é opcional
+
+Tag quebra de linha
+<br>
+equivale a "enter" em um editor de textos comum
+
+Tag linha horizontal
+<hr>
+decorativa, comumente usada para dividir regiões da página
+para memorizar: HoRizontal
+-->
+
+
+<html>
+<head><title>Slide 1</title></head>
+Ver os comentários deste arquivo<br>
+<body bgcolor="grey" text="white" vlink="orange" alink="yellow">
+<h1>Clique em "Google" para acessar o site</h1>
+<br>
+<a href="https://google.com">Google</a>
+
+<!--Listas não ordenadas são iniciadas com a tag <ul>
+cada elemento da lista deve estar entre tags <li>, que não precisa ser fechada obrigatoriamente
+
+Atributos dessa tag:
+type, recebe os valores square, circle ou disc(padrão)
+altera o marcador a esquerda de todos os elementos da lista
+pode ser usado individualmente em cada elemento, permitindo usar marcadores diferentes na mesma lista
+Para memorizar: tag UL de Unificada, diferente da tag OL, de Ordenada
+-->
+<ul>
+	<li type=square>elemento 1 da lista não ordenada
+	<li type=circle>elemento 2 da lista não ordenada
+	<li type=disc>elemento 3 da lista não ordenada
+</ul>
+
+<!-- Listas ordenadas são iniciadas com a tag <ol>
+assim como listas não ordenadas, cada elemento tem a tag <li>
+
+Atributos dessa tag
+Type, recebendo os valores:
+1 - os itens da lista são numerados
+a - os itens da lista são rotulados com letras minúsculas
+A - o mesmo, mas com letras maiúsculas
+i - rotulados com letras do alfabeto romano em minúsculo
+I - o mesmo, com letras maiúsculas
+
+Start, informar em qual valor a lista começa a ser contada
+
+-->
+
+<ol type=1 start=50>
+<li> elemento 1 da lista ordenada
+<li> elemento 2 da lista ordenada
+<li> elemento 3 da lista ordenada
+</ol>
+</body>
+</html>
