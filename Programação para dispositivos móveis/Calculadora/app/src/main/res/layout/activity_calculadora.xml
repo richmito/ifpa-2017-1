@@ -22,6 +22,16 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
+        android:id="@+id/ednumero1"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
         android:id="@+id/ednumero2"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
@@ -36,21 +46,35 @@
         android:layout_below="@+id/ednumero1"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/ednumero1"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp" />
-
     <Button
         android:text="Somar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/btsomar"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Subtrair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btsomar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btsubtrair" />
+
+    <Button
+        android:text="Multiplicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btsubtrair"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btmultiplicar" />
+
+    <Button
+        android:text="Dividir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btmultiplicar"
+        android:layout_alignEnd="@+id/btmultiplicar"
+        android:id="@+id/btdividir" />
 </RelativeLayout>
