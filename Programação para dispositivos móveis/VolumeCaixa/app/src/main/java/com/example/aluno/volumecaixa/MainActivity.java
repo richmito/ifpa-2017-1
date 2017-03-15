@@ -1,6 +1,7 @@
 package com.example.aluno.volumecaixa;
 
 import android.provider.ContactsContract;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
                 double altura = Double.parseDouble(editAltura.getText().toString());
                 double largura = Double.parseDouble(editLargura.getText().toString());
                 double comprimento = Double.parseDouble(editComprimento.getText().toString());
+
+                double volume = comprimento*altura*largura;
+
+                AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
+                dialogo.setTitle("Resultado do cálculo");
+                dialogo.setMessage("O volume desta caixa vale "+volume);
+                dialogo.setNeutralButton("ok",null);
+                dialogo.show();
+
+
 
             }
         });

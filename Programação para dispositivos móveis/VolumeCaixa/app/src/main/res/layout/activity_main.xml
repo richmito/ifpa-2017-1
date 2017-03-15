@@ -39,10 +39,12 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editAltura"
-        android:text="Insira Altura"
+        android:text=""
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp" />
+        android:layout_marginTop="23dp"
+        android:hint="Insira Altura"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -50,10 +52,12 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editLargura"
-        android:text="Insira Largura"
+        android:text=""
         android:layout_below="@+id/editComprimento"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp" />
+        android:layout_marginTop="19dp"
+        android:hint="Insira Largura"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,9 +65,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editComprimento"
-        android:text="Insira Comprimento"
+        android:text=""
         android:layout_below="@+id/editAltura"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:hint="Insira Comprimento"
+        />
 
 </RelativeLayout>
