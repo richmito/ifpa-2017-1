@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Cliente {
 	public static void main(String args[]) throws Exception, IOException {
-		Socket cliente = new Socket("127.0.0.1", 12345);
+		Socket cliente = new Socket("127.0.0.1", 7000);
 		System.out.println("Conexão estabelecida.");
 		
 		ObjectOutputStream saida = new ObjectOutputStream(cliente.getOutputStream());

@@ -15,12 +15,12 @@ public class Servidor {
 
 	public static void main(String args[]) throws IOException, Exception{
 		
-		ServerSocket servidor = new ServerSocket (5000);
-		System.out.println("Porta 5000 aberta!");
+		ServerSocket servidor = new ServerSocket (7000);
+		System.out.println("Porta 7000 aberta!");
 		
 		while(true){
 			Socket cliente = servidor.accept();
-		System.out.println("Nova conexão com o cliente "+ cliente.getInetAddress().getHostAddress());
+		System.out.println("Nova conexão com o seguinte cliente"+ cliente.getInetAddress().getHostAddress());
 		
 		ObjectInputStream dados = new ObjectInputStream(cliente.getInputStream());
 		Usuario usuario = (Usuario) dados.readObject();
@@ -29,7 +29,7 @@ public class Servidor {
 		List<Usuario> cadastro = new ArrayList(); 
 		Usuario cadastroUsuario = new Usuario();
 		cadastroUsuario.login = "Richelmy";
-		cadastroUsuario.senha = "12345";
+		cadastroUsuario.senha = "memes";
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(cadastroUsuario.senha.getBytes());
 		String criptografia = new BigInteger(1,md.digest()).toString(16);
@@ -37,16 +37,16 @@ public class Servidor {
 		cadastro.add(cadastroUsuario);
 		
 			
-		//Verificando informações de cadastro
-		String verificar = "Usuário não existe!";
+		// valor padrão caso nenhum teste seja aprovado
+		String testando = "Usuário não existe!";
 		
-		//Loop para verificar dados
-		for(Usuario user : cadastro){
+
+		for(Usuario user : cadastro){ // verificação dos dados
 			if (user.login.equals(usuario.login)){
 				if(user.senha.equals(usuario.senha)){
-					verificar = "Usuário logado!";
+					testando = "Usuário logado!";
 				}else{
-					verificar = "Senha incorreta!";
+					testando = "Senha incorreta!";
 				}
 				break;
 			}
@@ -57,17 +57,17 @@ public class Servidor {
 			
 			if(usua.login.equals(usuario.login)){
 				if(usua.senha.equals(usuario.senha)){
-					verificar = "Usuário logado!";
+					testando = "Usuário logado!";
 				}else{
-					verificar = "Senha incorreta!";
+					testando = "Senha errada!";
 				}
 				break;
 			}
 		}
 		
-		//Linha para enviar resposta ao servidor
-		ObjectOutputStream res = new ObjectOutputStream(cliente.getOutputStream());
-		res.writeObject(verificar);
+		
+		ObjectOutputStream res = new ObjectOutputStream(cliente.getOutputStream()); // respondendo ao servidor
+		res.writeObject(testando);
 		
 		}
 		
