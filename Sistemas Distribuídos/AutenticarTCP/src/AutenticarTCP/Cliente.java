@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Scanner;
+// import java.util.Scanner; // bibliotecas das tentativas iniciais do trabalho com interface de console
 
 import javax.swing.JOptionPane;
 
@@ -17,18 +17,18 @@ public class Cliente {
 		
 		ObjectOutputStream saida = new ObjectOutputStream(cliente.getOutputStream());
 		
-		//Enviando login e senha para o servidor
+		
 		Usuario user = new Usuario();
 		user.login = JOptionPane.showInputDialog("Login: ");
 		user.senha = JOptionPane.showInputDialog("Senha: ");
-		saida.writeObject(user);
+		saida.writeObject(user); /* enviando ao server */
 		
-		//Recebendo resposta do servidor
-		ObjectInputStream res = new ObjectInputStream(cliente.getInputStream());
-		String resposta = (String) res.readObject(); 
 		
-		//Mensagem de resposta do servidor
-		JOptionPane.showMessageDialog(null, resposta);
+		ObjectInputStream resp = new ObjectInputStream(cliente.getInputStream());
+		String resposta = (String) resp.readObject(); /* pedindo a resposta */
+		
+		
+		JOptionPane.showMessageDialog(null, resposta);/* exibindo ao usuário a mensagem recebida*/
 		
 		cliente.close();
 		
