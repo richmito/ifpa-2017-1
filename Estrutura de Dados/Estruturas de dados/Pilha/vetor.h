@@ -2,38 +2,32 @@
 using namespace std;
 // declaração das variáveis
 const int n=5;
-typedef float tDado[n];
 bool OK = true;
 
 struct tPilha{
   int topper;
-  tDado elemento[n];
+  float elemento[n];
+
 
 };
 
 tPilha pilha;
 
-void empilhar(float elemento){
+int escolhaMenuVetor=-1;
+
+
+void empilhar(float elemento,tPilha &pilha){
 
   if(pilha.topper==n){// verifica se a pilha já atingiu seu tamanho máximo
   OK=false;
-}else if(pilha.topper<0){
-  pilha.topper=0; // inicializa a pilha de valor negativo para a primeira posição
-  *pilha.elemento[pilha.topper]=elemento; // pilha recebe elemento passado por parâmetro
-  pilha.topper++; // topo da pilha é incrementado
-  }else{
-    // se a pilha já foi inicializada, adiciona elemento normalmente
-
-    *pilha.elemento[pilha.topper]=elemento;
+}else{
+    pilha.elemento[pilha.topper]=elemento;
     pilha.topper++;
   }
 };
 
-
-
-
-void desempilhar(){
-  if(pilha.topper<n){
+void desempilhar(tPilha &pilha){
+  if(pilha.topper==0){
     OK=false;
     cout<<"\nDesempilhar deu errado, pilha vazia!\n";
   }else{
@@ -44,14 +38,22 @@ void desempilhar(){
 
 }
 
-float acessarTopo(){
+float acessarTopo(tPilha pilha){
   if(pilha.topper<n){ // se a pilha estiver vazia, não há elemento a exibir
     OK=false;
   }else{
-    return *pilha.elemento[pilha.topper];
+    return pilha.elemento[pilha.topper-1];
   }
 }
-
- void helloworld(){
-   cout<<"\nHello World\n";
- }
+//
+// void menuVetor(){
+//   cout<<"\nEscolha uma opção\n \
+//   1- Empilhar\n \
+//   2- Desempilhar\n \
+//   3- Acessar Topo\n \
+//   4- Retornar ao menu anterior\n \
+//   ";
+//   cin<<escolhaMenuVetor;
+//
+//
+// }
