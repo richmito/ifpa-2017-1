@@ -4,7 +4,7 @@ using namespace std;
 
 //tPilha pilha;
 int main(){
-pilha.topper=0;
+pilha.topper=0; // inicializa o topo da pilha
   // empilhar(10,pilha);
   // empilhar(50);
   // empilhar(30);
@@ -12,6 +12,12 @@ pilha.topper=0;
   // desempilhar(pilha);
   //
   // cout<<acessarTopo(pilha)<<"\n";
+  // testes iniciais
 
-  
+
+
+  menuVetor(escolhaMenuVetor,pilha);
+
+
+
 }

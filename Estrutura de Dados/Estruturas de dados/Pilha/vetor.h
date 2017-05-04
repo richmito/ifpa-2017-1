@@ -45,15 +45,32 @@ float acessarTopo(tPilha pilha){
     return pilha.elemento[pilha.topper-1];
   }
 }
-//
-// void menuVetor(){
-//   cout<<"\nEscolha uma opção\n \
-//   1- Empilhar\n \
-//   2- Desempilhar\n \
-//   3- Acessar Topo\n \
-//   4- Retornar ao menu anterior\n \
-//   ";
-//   cin<<escolhaMenuVetor;
-//
-//
-// }
+
+void menuVetor(int &escolhaMenuVetor, tPilha &pilha){
+  while(escolhaMenuVetor!=4){
+
+    cout<<"\nEscolha uma opção\n \
+    1- Empilhar\n \
+    2- Desempilhar\n \
+    3- Acessar Topo\n \
+    4- Retornar ao menu anterior\n \
+    ";
+    cin>>escolhaMenuVetor;
+
+    switch (escolhaMenuVetor){
+      case 1:
+        empilhar(pilha);// empilhar não está funcionando sabe-se lá pq :(
+      case 2:
+        desempilhar(pilha);
+      case 3:
+        acessarTopo(pilha);
+      case 4:
+        break;
+      default:
+        cout<<"\nOpção inválida, por favor tente novamente\n";
+
+
+
+    }
+  }
+}
