@@ -12,8 +12,8 @@ struct tPilha{
 };
 
 tPilha pilha;
-
-int escolhaMenuVetor=-1;
+float valor;
+int escolhaMenuVetor=-1; // inicializa o menu com valor diferente das opções
 
 
 void empilhar(float elemento,tPilha &pilha){
@@ -59,7 +59,9 @@ void menuVetor(int &escolhaMenuVetor, tPilha &pilha){
 
     switch (escolhaMenuVetor){
       case 1:
-        empilhar(pilha);// empilhar não está funcionando sabe-se lá pq :(
+        cout<<"\nQual o valor a ser empilhado?\n";
+        cin>>valor;
+        empilhar(valor,pilha);// empilhar não funcionava pq quando era chamada, apenas informava uma das variáveis necessárias
       case 2:
         desempilhar(pilha);
       case 3:
