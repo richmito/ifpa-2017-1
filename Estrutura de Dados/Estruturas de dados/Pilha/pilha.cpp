@@ -4,14 +4,14 @@ using namespace std;
 
 //tPilha pilha;
 int main(){
-pilha.topper=0; // inicializa o topo da pilha
-  // empilhar(10,pilha);
-  // empilhar(50);
-  // empilhar(30);
+pilha.topper=-1; // inicializa o topo da pilha como um valor abaixo da primeira posição
+  //empilhar(10,pilha);
+  //empilhar(50,pilha);
+  //empilhar(30,pilha);
   // desempilhar(pilha);
   // desempilhar(pilha);
   //
-  // cout<<acessarTopo(pilha)<<"\n";
+  //cout<<acessarTopo(pilha)<<"\n";
   // testes iniciais
 
 
