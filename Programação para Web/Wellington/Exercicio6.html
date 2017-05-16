@@ -1,0 +1,109 @@
+<html>
+  <head>
+<meta charset=utf-8>
+    <title>Eventos em JS</title>
+    <body>
+
+        <h1><br>Tratamento de Eventos com JS<br></h1>
+<script src="js/exercicio6/solucao1.js"></script>
+<script src="js/exercicio6/solucao2.js"></script>
+<script src="js/exercicio6/solucao3.js"></script>
+<script src="js/exercicio6/solucao4.js"></script>
+<script src="js/exercicio6/solucao5.js"></script>
+
+1 - Crie mais dois botoes que contenham como valor, os numeros 1 e 2
+ao clicar em um terceiro botao voce altera esses valores para 3 e 4
+
+<table>
+
+
+  <tr>
+    <td><input id="btnA" value="1" type=button></input>
+    <td><input id="btnB" value="2" type=button></input>
+  </tr>
+</table>
+    <input value="Alterar valores" type=button onclick="alterar()"></input><br />
+    <input value="Voltar a valores originais" type=button onclick="voltar()"></input><br />
+
+
+
+2  - Crie um botão que chame uma função que solicite um nome e o mostre na tela atráves da caixa de diálogo simples
+<br /><input value="Solução 2" type=button onclick="solicitarNome()"></input><br />
+<br />
+
+
+
+3  - Crie um formulario com dois campos texto, que recebam dois valores inteiros,
+em seguida apresente o resultado com uma caixa de dialogo simples.
+<form>
+  Valor 1
+  <input id="campo1" type=textarea /><br />
+  Valor 2
+  <input id="campo2" type=textarea /><br />
+  <input value="Somar valores" type=button onclick="somarCampos()"></input>
+</form>
+
+<br />
+
+4 - Crie um formulario com 5 campos para preencher nome, endereco, telefone, cpf e bairro  e um botao cadastrar, se algum campo ficar vazio, indique ao usuario qual
+o campo. se todos estiverem preenchidos, mostre a mensagem de dados cadastrados com sucesso.
+<form>
+  <table border=1>
+<tr>
+  <td>Nome</td>
+  <td><input type=textarea id="nome"></input></td>
+</tr>
+<tr>
+    <td>Endereço</td>
+    <td><input type=textarea id="endereco"></input></td>
+</tr>
+<tr>
+  <td>Bairro</td>
+  <td><input type=textarea id="bairro"></input></td></tr>
+<tr>
+  <td>CPF</td>
+  <td>
+  <input type=textarea id="cpf"></input></td>
+</tr>
+<tr align="center">
+  <td><input value="Cadastrar" type=button onclick="cadastrar()"></input></td>
+</tr>
+</form>
+</table>
+<br /><br /><br />
+
+ 5  - Crie um formulario que contenha um campo login e senha, se o usuario for admin e senha 12345 mostre a mensagem  Seja bem vindo, caso contrario indique o campo que esta errado e redirecione o foco.
+Obs: deve ser criada uma funcao para essa validacao e a mesma deve ser invocada
+por um botao
+Obs: pesquise sobre o evento onFocus para que no momento de apresentar qual o campo
+vazio vc direcione o foco para o campo.
+<br /><br /><br />
+<table>
+<tr>
+  <td>
+    Login
+  </td>
+  <td>
+    <input type=textarea id="login"></input>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    Senha
+  </td>
+  <td>
+    <input type=password id="senha"></input>
+  </td>
+</tr>
+<tr>
+  <td>
+    <input type=button value="Entrar" onclick="entrar()">
+  </td>
+</tr>
+</table>
+
+
+
+<br />
+obs: para a prova estudem os outros eventos: onBlur, onChange, onMouseOver, onMouseOut
