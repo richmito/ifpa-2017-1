@@ -7,48 +7,46 @@ bool OK = true;
 struct tPilha{
   int topper;
   float elemento[n];
-
-
 };
 
-tPilha pilha;
+tPilha pilhaVetor;
 float valor;
 int escolhaMenuVetor=-1; // inicializa o menu com valor diferente das opções
 
 
-void empilhar(float elemento,tPilha &pilha){
+void empilharVetor(float elemento,tPilha &pilhaVetor){
 
-  if(pilha.topper==n){// verifica se a pilha já atingiu seu tamanho máximo
+  if(pilhaVetor.topper==n){// verifica se a pilha já atingiu seu tamanho máximo
   OK=false;
 }else{
-    pilha.topper++;
-    pilha.elemento[pilha.topper]=elemento;
+    pilhaVetor.topper++;
+    pilhaVetor.elemento[pilhaVetor.topper]=elemento;
 
   }
 };
 
-void desempilhar(tPilha &pilha){
-  if(pilha.topper<0){
+void desempilharVetor(tPilha &pilhaVetor){
+  if(pilhaVetor.topper<0){
     OK=false;
     cout<<"\nDesempilhar deu errado, pilha vazia!\n";
   }else{
-    pilha.topper--; // decrementando o topo da pilha, o valor armazenado anteriormente é ignorado
+    pilhaVetor.topper--; // decrementando o topo da pilha, o valor armazenado anteriormente é ignorado
 
   }
 
 
 }
 
-float acessarTopo(tPilha pilha){
-  if(pilha.topper<0){ // se a pilha estiver vazia, não há elemento a exibir
+float acessarTopoVetor(tPilha pilhaVetor){
+  if(pilhaVetor.topper<0){ // se a pilha estiver vazia, não há elemento a exibir
     OK=false;
     return -999999;
   }else{
-    return pilha.elemento[pilha.topper];
+    return pilhaVetor.elemento[pilhaVetor.topper];
   }
 }
 
-void menuVetor(int &escolhaMenuVetor, tPilha &pilha){
+void menuVetor(int &escolhaMenuVetor, tPilha &pilhaVetor){
   while(escolhaMenuVetor!=4){
 
     cout<<"\nEscolha uma opção\n \
@@ -63,16 +61,16 @@ void menuVetor(int &escolhaMenuVetor, tPilha &pilha){
       case 1:
         cout<<"\nQual o valor a ser empilhado?\n"; \
         cin>>valor;\
-        empilhar(valor,pilha);// empilhar não funcionava pq quando era chamada, apenas informava uma das variáveis necessárias
+        empilharVetor(valor,pilhaVetor);// empilhar não funcionava pq quando era chamada, apenas informava uma das variáveis necessárias
         break; // havia esquecido de colocar os break, não esquecer de dar uma bilada no Jordan
       case 2:
-        if(acessarTopo(pilha)==-999999)
+        if(acessarTopoVetor(pilhaVetor)==-999999) // -999999 é o código de erro
           cout<<"\nAcessar topo deu errado, pilha vazia!\n";
         else
-          cout<<"\n"<<acessarTopo(pilha);
+          cout<<"\n"<<acessarTopoVetor(pilhaVetor);
         break;
       case 3:
-        desempilhar(pilha);
+        desempilharVetor(pilhaVetor);
         break;
       case 4:
         break;
